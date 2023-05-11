@@ -1,7 +1,12 @@
 <h1>Articles</h1>
 
 Our blog has <%= Article.public_count %> articles and counting!
+<p>Article often refers to:
 
+Article (grammar), a grammatical element used to indicate definiteness or indefiniteness
+Article (publishing), a piece of nonfictional prose that is an independent part of a publication</p>
+
+<h2>There are some articles you definately read , update content and also delete article.</h2>
 <ul>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
@@ -12,4 +17,5 @@ Our blog has <%= Article.public_count %> articles and counting!
   <% end %>
 </ul>
 
+<h2>Click on below link to make your own new article.</h2>
 <%= link_to "New Article", new_article_path %>
